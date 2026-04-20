@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Office Gallery | Dental Circle Group</title>
+<title>Smile Results | Dental Circle Group</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet"/>
 <meta content="#fafaf8" name="theme-color"/>
-<meta content="Browse office photos, environment highlights, team moments, and public office visits at Dental Circle Group in Glendale, CA." name="description"/>
+<meta content="Explore before-and-after smile cases, transformations, and treatment result photos at Dental Circle Group in Glendale, CA." name="description"/>
 <link href="images/favicon.ico" rel="icon"/>
 <link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -89,6 +89,12 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
 .ba-wrap {
   position:relative; width:100%; height:380px; overflow:hidden; background:#f3f0ea;
 }
+
+.ba-wrap, .ba-wrap * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 .ba-wrap img {
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover; user-select:none; -webkit-user-drag:none;
 }
@@ -127,7 +133,7 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
   .ba-wrap { height:300px; }
 }
 </style>
-<link href="https://www.dentalcirclegroup.com/gallery.html" rel="canonical"/>
+<link href="https://www.dentalcirclegroup.com/smile-results.html" rel="canonical"/>
 </head>
 <body><nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
 <div class="max-w-7xl mx-auto px-6 sm:px-8">
@@ -226,37 +232,38 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
 </nav>
 <section class="relative min-h-[58vh] flex items-center justify-center overflow-hidden pt-24">
 <div class="absolute inset-0 z-0">
-<img alt="Dental Circle Group Office Gallery" class="w-full h-full object-cover object-center" src="images/clinic-photo1.png"/>
+<img alt="Smile Results" class="w-full h-full object-cover object-center" src="images/clinic-photo1.png"/>
 <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/45"></div>
 </div>
 <div class="hero-glow"></div>
 <div class="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 text-center py-24 md:py-28">
 <p class="text-[#d0ad66] uppercase tracking-[0.35em] text-[11px] sm:text-xs mb-6 font-medium">Gallery</p>
-<h1 class="text-[3.1rem] sm:text-[4rem] md:text-[5rem] leading-[0.98] font-light text-white mb-8">Office Gallery</h1>
-<p class="max-w-2xl mx-auto text-white/80 font-light leading-relaxed">A curated look at the office environment, interior details, and special office highlights—managed from one Google Sheet and updated automatically.</p>
+<h1 class="text-[3.1rem] sm:text-[4rem] md:text-[5rem] leading-[0.98] font-light text-white mb-8">Smile Results</h1>
+<p class="max-w-2xl mx-auto text-white/80 font-light leading-relaxed">Interactive before-and-after result cards with a built-in slider on each image—fed from a Google Sheet and updated without touching code.</p>
 </div>
 </section>
 
 <section class="py-20 bg-white">
 <div class="max-w-6xl mx-auto px-6 sm:px-8">
-<div class="flex flex-wrap gap-3 justify-center mb-10" id="gallery-filters">
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em] active" data-filter="all">All</button>
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="office">Office</button>
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="visit">Office Highlights</button>
+<div class="flex flex-wrap gap-3 justify-center mb-10" id="result-filters">
+<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em] active" data-filter="all">All Results</button>
+<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="invisalign">Invisalign</button>
+<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="veneers">Veneers</button>
+<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="implants">Implants</button>
+<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="featured">Featured Visit</button>
 </div>
-<div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-center"></div>
-<div id="gallery-empty" class="hidden empty-note rounded-[28px] px-8 py-14 text-center max-w-3xl mx-auto">
-<h3 class="text-3xl mb-3">No gallery photos yet</h3>
-<p class="font-light leading-relaxed">Once staff adds office photos into the <strong>office_gallery</strong> tab of the Google Sheet, they will appear here automatically.</p>
+<div id="results-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+<div id="results-empty" class="hidden empty-note rounded-[28px] px-8 py-14 text-center max-w-3xl mx-auto">
+<h3 class="text-3xl mb-3">No smile results yet</h3>
+<p class="font-light leading-relaxed">Once staff adds cases into the <strong>smile_results</strong> tab of the Google Sheet, they will appear here with the interactive before-and-after slider.</p>
 </div>
 </div>
 </section>
 
-<section class="py-20 bg-ivory border-t border-gray-100" id="contact">
-<div class="max-w-5xl mx-auto px-6 sm:px-8 text-center">
-<p class="text-sm uppercase tracking-[0.2em] text-gold mb-4 font-medium">Need an appointment?</p>
-<h2 class="text-4xl md:text-5xl text-charcoal mb-6">Start Your Visit With Confidence</h2>
-<a class="pill-primary inline-flex px-8 py-4 text-sm uppercase tracking-widest" href="index.html#contact">Request Appointment</a>
+<section class="py-20 bg-ivory border-t border-gray-100">
+<div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
+<p class="text-sm uppercase tracking-[0.2em] text-gold mb-4 font-medium">Important Note</p>
+<p class="text-charcoal-light font-light leading-relaxed">Only publish before-and-after cases, patient images, or public figure visits when the office has explicit permission to use them publicly.</p>
 </div>
 </section>
 
@@ -319,16 +326,59 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script>
-const GALLERY_ENDPOINT = "https://script.google.com/macros/s/AKfycby8hTEdV7sXB9Hx3myTb55BPC7MWWnyUnK4cp2dRkjPK70h8sUtztBZ2h-YAmEdTvuK/exec";
+const RESULTS_ENDPOINT = "https://script.google.com/macros/s/AKfycby8hTEdV7sXB9Hx3myTb55BPC7MWWnyUnK4cp2dRkjPK70h8sUtztBZ2h-YAmEdTvuK/exec";
 
-const galleryFallback = [];
+const resultsFallback = [];
 
-let currentFilter = "all";
+let resultFilter = "all";
 
-function renderGallery(items) {
-  const grid = document.getElementById("gallery-grid");
-  const empty = document.getElementById("gallery-empty");
-  const filtered = items.filter(item => currentFilter === "all" ? true : (item.category || "").toLowerCase() === currentFilter);
+function createSlider(card) {
+  const wrap = card.querySelector(".ba-wrap");
+  const after = card.querySelector(".ba-after");
+  const divider = card.querySelector(".ba-divider");
+  const handle = card.querySelector(".ba-handle");
+  let isDown = false;
+
+  function setPosition(clientX) {
+    const rect = wrap.getBoundingClientRect();
+    let x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+    const percent = (x / rect.width) * 100;
+    after.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    divider.style.left = `${percent}%`;
+    handle.style.left = `${percent}%`;
+  }
+
+  const down = (e) => {
+    if (e.preventDefault) e.preventDefault();
+    isDown = true;
+    document.body.style.cursor = "ew-resize";
+    setPosition(e.touches ? e.touches[0].clientX : e.clientX);
+  };
+  const move = (e) => {
+    if (!isDown) return;
+    setPosition(e.touches ? e.touches[0].clientX : e.clientX);
+  };
+  const up = () => {
+    isDown = false;
+    document.body.style.cursor = "";
+  };
+
+  wrap.addEventListener("mousedown", down);
+  wrap.addEventListener("touchstart", down, { passive: true });
+  window.addEventListener("mousemove", move);
+  window.addEventListener("touchmove", move, { passive: true });
+  window.addEventListener("mouseup", up);
+  window.addEventListener("touchend", up);
+}
+
+function renderResults(items) {
+  const grid = document.getElementById("results-grid");
+  const empty = document.getElementById("results-empty");
+  const filtered = items.filter(item => {
+    if (resultFilter === "all") return true;
+    if (resultFilter === "featured") return String(item.public_figure || "").toLowerCase() === "true";
+    return String(item.treatment || "").toLowerCase() === resultFilter;
+  });
   grid.innerHTML = "";
 
   if (!filtered.length) {
@@ -339,42 +389,51 @@ function renderGallery(items) {
 
   filtered.forEach(item => {
     const card = document.createElement("article");
-    card.className = "gallery-card";
+    card.className = "ba-card";
     card.innerHTML = `
-      <img class="gallery-img" src="${item.image_url}" alt="${item.title || 'Office Gallery Photo'}">
+      <div class="ba-wrap">
+        <img src="${item.before_url}" alt="Before - ${item.title || 'Smile Result'}">
+        <img class="ba-after" src="${item.after_url}" alt="After - ${item.title || 'Smile Result'}">
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+        <div class="ba-divider"></div>
+        <div class="ba-handle"><i data-lucide="move-horizontal" class="w-5 h-5 text-charcoal"></i></div>
+      </div>
       <div class="p-6">
         <div class="flex items-center justify-between gap-4 mb-3">
-          <h3 class="text-3xl text-charcoal">${item.title || 'Gallery Photo'}</h3>
-          <span class="text-[10px] uppercase tracking-[0.2em] text-gold">${item.category || 'gallery'}</span>
+          <h3 class="text-3xl text-charcoal">${item.title || 'Smile Result'}</h3>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-gold">${item.treatment || 'result'}</span>
         </div>
         <p class="text-charcoal-light font-light leading-relaxed">${item.caption || ''}</p>
       </div>
     `;
     grid.appendChild(card);
+    createSlider(card);
   });
+  lucide.createIcons();
 }
 
-async function loadGallery() {
+async function loadResults() {
   try {
-    const res = await fetch(GALLERY_ENDPOINT);
+    const res = await fetch(RESULTS_ENDPOINT);
     if (!res.ok) throw new Error("Failed");
     const data = await res.json();
-    const items = Array.isArray(data.items) ? data.items : galleryFallback;
-    renderGallery(items.filter(x => String(x.visible ?? "true").toLowerCase() !== "false"));
+    const items = Array.isArray(data.items) ? data.items : resultsFallback;
+    renderResults(items.filter(x => String(x.visible ?? "true").toLowerCase() !== "false"));
   } catch (e) {
-    renderGallery(galleryFallback);
+    renderResults(resultsFallback);
   }
 }
 
-document.querySelectorAll(".gallery-filter").forEach(btn => {
+document.querySelectorAll("#result-filters .gallery-filter").forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelectorAll(".gallery-filter").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll("#result-filters .gallery-filter").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
-    currentFilter = btn.dataset.filter;
-    loadGallery();
+    resultFilter = btn.dataset.filter;
+    loadResults();
   });
 });
 
-loadGallery();
+loadResults();
 </script>
 </body></html>
