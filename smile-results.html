@@ -87,7 +87,11 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
   background:#fff; border: 1px solid rgba(23,23,23,.06); border-radius: 28px; box-shadow: 0 16px 36px rgba(17,17,17,.05); overflow:hidden;
 }
 .ba-wrap {
-  position:relative; width:100%; height:380px; overflow:hidden; background:#f3f0ea;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f3f0ea;
 }
 
 .ba-wrap, .ba-wrap * {
@@ -96,7 +100,7 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
 }
 
 .ba-wrap img {
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; user-select:none; -webkit-user-drag:none;
+  position:absolute; inset:0; width:100%; height:100%; object-fit: cover; object-position: center 45%; user-select:none; -webkit-user-drag:none;
 }
 .ba-after {
   clip-path: inset(0 50% 0 0);
@@ -129,8 +133,8 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
   transform: scale(1.03);
 }
 @media (max-width: 768px) {
-  .doctor-name-desktop { display:none; }
-  .ba-wrap { height:300px; }
+  .doctor-name-desktop { display: none; }
+  .ba-wrap { aspect-ratio: 16 / 10; }
 }
 </style>
 <link href="https://www.dentalcirclegroup.com/smile-results.html" rel="canonical"/>
