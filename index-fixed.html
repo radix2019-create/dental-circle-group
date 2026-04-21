@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!--
+  FINAL DOMAIN NOTE:
+  with your real final domain after you connect it in Vercel.
+  This includes canonical tags, Open Graph URLs, Twitter URLs, structured data, and sitemap.xml.
+-->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmetic, Family &amp; Implant Dentist 
+  in Glendale, CA | Dental Circle Group</title>
+<meta content="#fafaf8" name="theme-color"/>
+<meta content="Dental Circle Group is a cosmetic, family, and implant dentist in Glendale, CA offering Invisalign, dental implants, oral surgery, preventive care, and comfort-focused treatment for new patients." name="description"/>
+<!-- Favicon -->
+<link href="images/favicon.ico" rel="icon"/>
+<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="images/apple-touch-icon.png" rel="apple-touch-icon"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: "#b89652",
+              dark: "#9d7b3e",
+              light: "#d4b87a"
+            },
+            ivory: {
+              DEFAULT: "#fafaf8",
+              dark: "#f4f2ed"
+            },
+            charcoal: {
+              DEFAULT: "#171717",
+              light: "#4b4b4b"
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            soft: "0 20px 50px rgba(0,0,0,0.07)"
+          }
+        }
+      }
+    };
+  </script>
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<!-- Elfsight -->
+<script async="" src="https://elfsightcdn.com/platform.js"></script>
+<style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafaf8;
+      color: #171717;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pill-primary {
+      background: #b89652;
+      color: #fff;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 28px rgba(184,150,82,.22);
+    }
+    .pill-primary:hover {
+      background: #9d7b3e;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(184,150,82,.28);
+    }
+
+    .pill-light {
+      background: rgba(255,255,255,.9);
+      color: #171717;
+      border: 1px solid rgba(23,23,23,.12);
+      border-radius: 9999px;
+      transition: all .3s ease;
+    }
+    .pill-light:hover {
+      border-color: #b89652;
+      color: #9d7b3e;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+    }
+
+    .pill-dark {
+      background: rgba(255,255,255,.05);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.36);
+      border-radius: 9999px;
+      transition: all .3s ease;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .pill-dark:hover {
+      background: #fff;
+      color: #171717;
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .top-right-button {
+      background: rgba(184,150,82,.12);
+      border: 1px solid rgba(184,150,82,.34);
+      color: #171717;
+      border-radius: 9999px;
+      transition: all .28s ease;
+    }
+    .top-right-button:hover {
+      background: #b89652;
+      color: #fff;
+      border-color: #b89652;
+      transform: translateY(-1px);
+    }
+
+    .service-tab {
+      border-radius: 9999px;
+      transition: all .25s ease;
+    }
+    .service-tab.active {
+      background: #171717;
+      color: #fff;
+      border-color: #171717;
+      box-shadow: 0 12px 28px rgba(23,23,23,.12);
+    }
+
+    .service-panel { display: none; }
+    .service-panel.active { display: block; }
+
+    .services-sticky-bar {
+      position: sticky;
+      top: 104px;
+      z-index: 20;
+      background: rgba(250,250,248,.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 12px 0;
+    }
+
+    .img-hover-zoom {
+      overflow: hidden;
+      border-radius: 28px;
+    }
+    .img-hover-zoom img { transition: transform .75s ease; }
+    .img-hover-zoom:hover img { transform: scale(1.05); }
+
+    .team-photo-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+    }
+    .team-photo { transition: transform .65s ease, filter .4s ease; }
+    .team-photo-wrap:hover .team-photo {
+      transform: scale(1.06);
+      filter: brightness(1.03);
+    }
+    .team-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(23,23,23,.16), rgba(23,23,23,.03));
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+    .team-photo-wrap:hover .team-overlay { opacity: 1; }
+
+    /* Hero */
+    .hero-glow {
+      position: absolute;
+      left: 50%;
+      bottom: 140px;
+      transform: translateX(-50%);
+      width: 560px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(184,150,82,.18) 0%, rgba(184,150,82,.07) 35%, rgba(184,150,82,0) 72%);
+      filter: blur(34px);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-fade-up {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: heroFadeUp 1.1s ease forwards;
+    }
+    .hero-fade-delay-1 { animation-delay: .15s; }
+    .hero-fade-delay-2 { animation-delay: .35s; }
+    .hero-fade-delay-3 { animation-delay: .55s; }
+    .hero-fade-delay-4 { animation-delay: .72s; }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Reviews */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .9s ease, transform .9s ease;
+    }
+    .reveal-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: .08s; }
+    .delay-2 { transition-delay: .16s; }
+    .delay-3 { transition-delay: .24s; }
+    .delay-4 { transition-delay: .32s; }
+
+    .review-featured:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 70px rgba(0,0,0,.08);
+    }
+    .review-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 56px rgba(0,0,0,.07);
+    }
+    .quote-float { animation: quoteFloat 5.5s ease-in-out infinite; }
+    @keyframes quoteFloat {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-6px); opacity: .92; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* FAQ */
+    .faq-heading-line {
+      width: 46px;
+      height: 1px;
+      background: linear-gradient(90deg, #b89652, rgba(184,150,82,.18));
+    }
+    .faq-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,247,243,.98));
+      border: 1px solid rgba(23,23,23,.08);
+      border-radius: 24px;
+      box-shadow: 0 14px 36px rgba(17,17,17,.05);
+      transition: all .32s ease;
+      overflow: hidden;
+    }
+    .faq-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 42px rgba(17,17,17,.06);
+    }
+    .faq-card.active {
+      border-color: rgba(184,150,82,.45);
+      box-shadow:
+        0 20px 46px rgba(17,17,17,.07),
+        0 0 0 1px rgba(184,150,82,.08);
+    }
+    .faq-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      text-align: left;
+      padding: 24px 28px;
+      background: transparent;
+    }
+    .faq-button:hover { background: rgba(255,255,255,.35); }
+    .faq-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      border: 1px solid rgba(184,150,82,.26);
+      background: rgba(184,150,82,.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all .28s ease;
+    }
+    .faq-card.active .faq-icon-wrap {
+      background: rgba(184,150,82,.12);
+      border-color: rgba(184,150,82,.45);
+    }
+    .faq-icon { transition: transform .32s ease; }
+    .faq-card.active .faq-icon { transform: rotate(180deg); }
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .34s ease;
+    }
+    .faq-card.active .faq-answer { grid-template-rows: 1fr; }
+    .faq-answer-inner { overflow: hidden; }
+    .faq-answer-content {
+      padding: 0 28px 28px 28px;
+      color: #4b4b4b;
+      font-weight: 300;
+      line-height: 1.85;
+      white-space: pre-line;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity .28s ease, transform .28s ease;
+    }
+    .faq-card.active .faq-answer-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      .services-sticky-bar { top: 94px; }
+    }
+    @media (max-width: 768px) {
+      body { padding-bottom: 84px; }
+      .services-sticky-bar { top: 82px; }
+      .faq-button { padding: 20px; }
+      .faq-answer-content { padding: 0 20px 22px 20px; }
+           .hero-glow {
+        width: 320px;
+        height: 180px;
+        bottom: 120px;
+      }
+    }
+.footer-logo img {
+  opacity: 0.98;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.45));
+  transition: all 0.3s ease;
+}
+.footer-logo img:hover {
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.65));
+  transform: scale(1.03);
+}
+
+
+.mobile-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.95rem 0;
+  background: transparent;
+  color: #4b4b4b;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.mobile-subnav-row {
+  display: block;
+  padding: 0.7rem 0;
+  color: #4b4b4b;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+
+    @media (max-width: 768px) {
+      #navbar .top-right-button { display: none; }
+      #navbar .max-w-7xl { padding-left: 16px; padding-right: 16px; }
+      #navbar .flex.items-center.justify-between { min-height: 80px; }
+      #navbar img { height: 56px !important; width: auto; }
+      #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 60;
+      }
+      .hero-glow {
+        width: 280px;
+        height: 120px;
+        bottom: 40px;
+        filter: blur(22px);
+      }
+      .pill-primary,
+      .pill-dark,
+      .pill-light {
+        justify-content: center;
+      }
+      h1 { word-break: normal; }
+    }
+
+
+    @media (max-width: 768px) {
+      #navbar .top-right-button { display: none; }
+      #navbar .max-w-7xl { padding-left: 16px; padding-right: 16px; }
+      #navbar .nav-inner { min-height: 80px; }
+      #navbar .brand-logo { height: 56px !important; width: auto; }
+      #navbar .brand-name { max-width: calc(100vw - 160px); }
+      #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 60;
+      }
+      #mobile-menu .space-y-1 { margin-top: 4px; }
+      .hero-glow {
+        width: 280px;
+        height: 120px;
+        bottom: 40px;
+        filter: blur(22px);
+      }
+      .pill-primary,
+      .pill-dark,
+      .pill-light {
+        justify-content: center;
+      }
+      h1 { word-break: normal; }
+    }
+
+</style>
+<!-- Replace placeholder domain before final launch -->
+<link href="https://www.dentalcirclegroup.com/" rel="canonical"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="website" property="og:type"/><meta content="Cosmetic, Family &amp; Implant Dentist in Glendale, CA | Dental Circle Group" property="og:title"/><meta content="Dental Circle Group is a cosmetic, family, and implant dentist in Glendale, CA offering Invisalign, dental implants, oral surgery, preventive care, and comfort-focused treatment for new patients." property="og:description"/><meta content="https://www.dentalcirclegroup.com/" property="og:url"/><meta content="images/clinic-photo1.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Cosmetic, Family &amp; Implant Dentist in Glendale, CA | Dental Circle Group" name="twitter:title"/><meta content="Dental Circle Group is a cosmetic, family, and implant dentist in Glendale, CA offering Invisalign, dental implants, oral surgery, preventive care, and comfort-focused treatment for new patients." name="twitter:description"/><meta content="images/clinic-photo1.png" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dentist", "name": "Dental Circle Group", "url": "https://www.dentalcirclegroup.com/", "telephone": "+1-818-243-8888", "address": {"@type": "PostalAddress", "streetAddress": "207 N Central Ave", "addressLocality": "Glendale", "addressRegion": "CA", "postalCode": "91203", "addressCountry": "US"}, "image": "images/clinic-photo1.png", "priceRange": "$$", "areaServed": ["Glendale", "Burbank", "Los Angeles"], "medicalSpecialty": ["Cosmetic Dentistry", "Family Dentistry", "Implant Dentistry", "Oral Surgery"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Dental Circle Group", "url": "https://www.dentalcirclegroup.com/"}</script></head>
+<body>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="navbar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+<div class="nav-inner flex items-center justify-between h-20 md:h-28">
+<a class="flex items-center gap-3 min-w-0" href="index.html">
+  <img alt="Dental Circle Group Logo" class="brand-logo h-14 md:h-24 w-auto object-contain transition-all duration-300 hover:opacity-90" src="images/new-logo-1-1.png"/>
+  <span class="brand-name truncate" style="font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(16px, 4vw, 22px); color: #2f2b26; letter-spacing: 0.5px;">
+    Dr. Payam Sooferi
+  </span>
+</a>
+
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm uppercase tracking-widest text-charcoal-light hover:text-gold transition-colors" href="index.html">Home</a>
+
+<div class="relative inline-block group">
+<button class="flex items-center gap-2 h-10 text-sm uppercase tracking-widest text-charcoal-light hover:text-gold transition-colors" type="button">
+<span>Services</span>
+<i class="w-4 h-4" data-lucide="chevron-down"></i>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full h-4 w-56"></div>
+<div class="absolute left-1/2 top-[calc(100%+8px)] -translate-x-1/2 opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 w-[320px] bg-white border border-gray-100 rounded-[28px] shadow-2xl shadow-black/5 p-4 z-50">
+<div class="grid grid-cols-1 gap-1">
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="prosthodontics-glendale.html">Prosthodontics</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="invisalign-glendale.html">Invisalign</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="dental-implants-glendale.html">Dental Implants</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="sedation-dentistry-glendale.html">Sedation Dentistry</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="family-dentist-glendale.html">Family Dentistry</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="preventive-dentistry-glendale.html">Preventive Dentistry</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="oral-surgery-glendale.html">Oral Surgery</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="periodontics-glendale.html">Periodontics</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="orthodontics-glendale.html">Orthodontics</a>
+</div>
+</div>
+</div>
+
+<div class="relative inline-block group">
+<button class="flex items-center gap-2 h-10 text-sm uppercase tracking-widest text-charcoal-light hover:text-gold transition-colors" type="button">
+<span>Gallery</span>
+<i class="w-4 h-4" data-lucide="chevron-down"></i>
+</button>
+<div class="absolute left-1/2 -translate-x-1/2 top-full h-4 w-56"></div>
+<div class="absolute left-1/2 top-[calc(100%+8px)] -translate-x-1/2 opacity-0 invisible translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 w-[280px] bg-white border border-gray-100 rounded-[28px] shadow-2xl shadow-black/5 p-4 z-50">
+<div class="grid grid-cols-1 gap-1">
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="gallery.html">Office Gallery</a>
+<a class="rounded-2xl px-4 py-3 text-sm text-charcoal-light hover:bg-ivory-dark hover:text-charcoal transition-all" href="smile-results.html">Smile Results</a>
+</div>
+</div>
+</div>
+
+<a class="text-sm uppercase tracking-widest text-charcoal-light hover:text-gold transition-colors" href="team.html">Team</a>
+<a class="text-sm uppercase tracking-widest text-charcoal-light hover:text-gold transition-colors" href="#reviews">Reviews</a>
+<a class="text-sm uppercase tracking-widest text-charcoal-light hover:text-gold transition-colors" href="faq.html">FAQ</a>
+<a class="top-right-button px-6 py-3 text-sm uppercase tracking-widest whitespace-nowrap" href="#contact">Request Appointment</a>
+</div>
+
+<div class="md:hidden flex items-center">
+<button aria-label="Open menu" class="text-charcoal p-2" id="mobile-menu-btn" type="button">
+<i class="w-7 h-7" data-lucide="menu"></i>
+</button>
+</div>
+</div>
+</div>
+
+<div class="md:hidden hidden bg-white border-t border-gray-100 shadow-sm absolute w-full" id="mobile-menu">
+<div class="px-5 py-4 flex flex-col">
+<a class="mobile-nav-row border-b border-gray-100" href="index.html">
+  <span>Home</span>
+  <span class="w-5"></span>
+</a>
+
+<button class="mobile-nav-row border-b border-gray-100" id="mobile-services-btn" type="button">
+  <span>Services</span>
+  <i class="w-5 h-5 transition-transform duration-200" data-lucide="chevron-down"></i>
+</button>
+<div class="hidden pl-4 pb-3 border-b border-gray-100" id="mobile-services-list">
+  <a class="mobile-subnav-row" href="prosthodontics-glendale.html">Prosthodontics</a>
+  <a class="mobile-subnav-row" href="invisalign-glendale.html">Invisalign</a>
+  <a class="mobile-subnav-row" href="dental-implants-glendale.html">Dental Implants</a>
+  <a class="mobile-subnav-row" href="sedation-dentistry-glendale.html">Sedation Dentistry</a>
+  <a class="mobile-subnav-row" href="family-dentist-glendale.html">Family Dentistry</a>
+  <a class="mobile-subnav-row" href="preventive-dentistry-glendale.html">Preventive Dentistry</a>
+  <a class="mobile-subnav-row" href="oral-surgery-glendale.html">Oral Surgery</a>
+  <a class="mobile-subnav-row" href="periodontics-glendale.html">Periodontics</a>
+  <a class="mobile-subnav-row" href="orthodontics-glendale.html">Orthodontics</a>
+</div>
+
+<button class="mobile-nav-row border-b border-gray-100" id="mobile-gallery-btn" type="button">
+  <span>Gallery</span>
+  <i class="w-5 h-5 transition-transform duration-200" data-lucide="chevron-down"></i>
+</button>
+<div class="hidden pl-4 pb-3 border-b border-gray-100" id="mobile-gallery-list">
+  <a class="mobile-subnav-row" href="gallery.html">Office Gallery</a>
+  <a class="mobile-subnav-row" href="smile-results.html">Smile Results</a>
+</div>
+
+<a class="mobile-nav-row border-b border-gray-100" href="team.html">
+  <span>Team</span>
+  <span class="w-5"></span>
+</a>
+<a class="mobile-nav-row border-b border-gray-100" href="#reviews">
+  <span>Reviews</span>
+  <span class="w-5"></span>
+</a>
+<a class="mobile-nav-row border-b border-gray-100" href="faq.html">
+  <span>FAQ</span>
+  <span class="w-5"></span>
+</a>
+<a class="mobile-nav-row text-gold" href="#contact">
+  <span>Request Appointment</span>
+  <span class="w-5"></span>
+</a>
+</div>
+</div></div>
+</div>
+</nav>
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
+<div class="absolute inset-0 z-0">
+<img alt="Dental Circle Group Clinic" class="w-full h-full object-cover object-center" src="images/clinic-photo1.png"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/45"></div>
+</div>
+<div class="hero-glow"></div>
+<div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 text-center py-20 sm:py-24 md:py-40">
+<div class="flex flex-col items-center">
+<p class="text-[#d0ad66] uppercase tracking-[0.22em] text-[10px] sm:text-xs mb-5 font-medium hero-fade-up hero-fade-delay-1">
+  Luxury Dentistry in Glendale
+</p>
+<h1 class="text-[2.55rem] leading-[1.02] sm:text-[4rem] md:text-[5.8rem] font-light text-white mb-6 hero-fade-up hero-fade-delay-2">
+  Cosmetic, Family & Implant Dentist
+  <span class="text-gold block sm:inline">in Glendale, CA</span>
+</h1>
+<div class="w-full max-w-[420px] sm:max-w-none flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 hero-fade-up hero-fade-delay-3">
+  <a href="#contact" class="pill-primary w-full sm:w-auto text-center px-8 py-4 text-sm uppercase tracking-[0.18em]">
+    Request Appointment
+  </a>
+  <a href="tel:8182438888" class="pill-dark w-full sm:w-auto text-center px-8 py-4 text-sm uppercase tracking-[0.18em]">
+    Call Now
+  </a>
+</div>
+<div class="mt-8 flex flex-wrap items-center justify-center gap-3 hero-fade-up hero-fade-delay-4">
+  <span class="pill-dark px-5 py-3 text-[11px] sm:text-xs uppercase tracking-[0.18em]">
+    Glendale, Burbank & Los Angeles
+  </span>
+  <span class="pill-dark px-5 py-3 text-[11px] sm:text-xs uppercase tracking-[0.18em]">4.9★ Patient Experience</span>
+  <span class="pill-dark px-5 py-3 text-[11px] sm:text-xs uppercase tracking-[0.18em]">(818) 243-8888</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white border-b border-gray-100">
+<div class="max-w-6xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-[1.3fr_.7fr] gap-10 items-start animate-on-scroll">
+<div>
+<h2 class="text-sm uppercase tracking-[0.2em] text-gold mb-4 font-medium">Glendale Dentist</h2>
+<h3 class="text-4xl md:text-5xl text-charcoal mb-6">A Glendale dental office built for trust, comfort, and long-term care</h3>
+<p class="text-charcoal-light font-light leading-relaxed mb-5">Dental Circle Group provides cosmetic, restorative, and family dental care in Glendale, CA for patients who want quality treatment in a modern, welcoming office. Whether you are looking for a routine dental home, Invisalign, implants, or a more advanced treatment plan, our goal is to make the process feel clear, calm, and personalized.</p>
+<p class="text-charcoal-light font-light leading-relaxed">Patients searching for a dentist near Glendale often compare reviews, office atmosphere, and treatment options before booking. This website is designed to make that decision easier by clearly showing the services we offer, who leads your care, and how to start as a new patient.</p>
+</div>
+<div class="bg-ivory border border-gray-100 shadow-soft p-8 rounded-[28px]">
+<p class="text-xs uppercase tracking-[0.22em] text-gold mb-4">Popular services</p>
+<div class="flex flex-wrap gap-3">
+<a class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]" href="dental-implants-glendale.html">Dental Implants</a>
+<a class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]" href="invisalign-glendale.html">Invisalign</a>
+<a class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]" href="family-dentist-glendale.html">Family Dentistry</a>
+<a class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]" href="oral-surgery-glendale.html">Oral Surgery</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white border-b border-gray-100">
+<div class="max-w-6xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="text-center animate-on-scroll">
+<div class="w-16 h-16 mx-auto border border-gold/30 rounded-full flex items-center justify-center mb-6 text-gold bg-ivory">
+<i class="w-6 h-6" data-lucide="microscope"></i>
+</div>
+<h3 class="text-xl mb-3">Modern Technology</h3>
+<p class="text-charcoal-light text-sm font-light leading-relaxed">Modern dental care in Glendale with Invisalign, dental implants, oral surgery, sedation dentistry, preventive care, and a patient experience designed around comfort and confidence.</p>
+</div>
+<div class="text-center animate-on-scroll">
+<div class="w-16 h-16 mx-auto border border-gold/30 rounded-full flex items-center justify-center mb-6 text-gold bg-ivory">
+<i class="w-6 h-6" data-lucide="gem"></i>
+</div>
+<h3 class="text-xl mb-3">Personalized Care</h3>
+<p class="text-charcoal-light text-sm font-light leading-relaxed">Every treatment plan is tailored to the patient’s needs, goals, comfort, and long-term oral health.</p>
+</div>
+<div class="text-center animate-on-scroll">
+<div class="w-16 h-16 mx-auto border border-gold/30 rounded-full flex items-center justify-center mb-6 text-gold bg-ivory">
+<i class="w-6 h-6" data-lucide="heart-handshake"></i>
+</div>
+<h3 class="text-xl mb-3">Comfort-Focused Visits</h3>
+<p class="text-charcoal-light text-sm font-light leading-relaxed">A calm, patient-centered environment designed to make every visit more relaxed and stress-free.</p>
+</div>
+<div class="text-center animate-on-scroll">
+<div class="w-16 h-16 mx-auto border border-gold/30 rounded-full flex items-center justify-center mb-6 text-gold bg-ivory">
+<i class="w-6 h-6" data-lucide="award"></i>
+</div>
+<h3 class="text-xl mb-3">Experienced Team</h3>
+<p class="text-charcoal-light text-sm font-light leading-relaxed">Professional, friendly, and committed to delivering excellent care for individuals and families.</p>
+</div>
+</div>
+</div>
+</section><section class="py-24 md:py-32 bg-ivory" id="services">
+<div class="max-w-6xl mx-auto px-6 sm:px-8">
+<div class="text-center mb-10 animate-on-scroll">
+<h2 class="text-sm uppercase tracking-[0.2em] text-gold mb-4 font-medium">Services</h2>
+<h3 class="text-4xl md:text-5xl text-charcoal">Explore Care Options</h3>
+<div class="w-12 h-[1px] bg-gold mx-auto mt-8"></div>
+</div>
+<div class="space-y-8"><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<a class="block group" href="prosthodontics-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Prosthodontics" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Prosthodontics</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Prosthodontics focuses on restoring and replacing teeth to improve function, comfort, and appearance. This type of care can include crowns, bridges, dentures, and other restorative solutions tailored to each patient’s needs.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="invisalign-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Invisalign" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Invisalign</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Invisalign uses clear aligners to gradually move teeth into better alignment without traditional braces. It is a discreet and convenient option for patients looking to improve their smile.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="dental-implants-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Dental Implants" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Dental Implants</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Dental implants are a long-term solution for replacing missing teeth. They are designed to look, feel, and function like natural teeth while helping support overall oral health.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="sedation-dentistry-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Sedation Dentistry" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Sedation Dentistry</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Sedation dentistry helps patients feel more at ease during treatment. It can be especially helpful for those who feel nervous about dental visits or who need more complex procedures.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="family-dentist-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Family Dentistry" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Family Dentistry</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Family dentistry provides care for patients at different stages of life, making it easier for households to receive treatment in one welcoming office.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="preventive-dentistry-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Preventive Dentistry" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Preventive Dentistry</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Preventative dentistry focuses on protecting the teeth and gums before larger problems develop. Regular cleanings, exams, and early attention can help maintain strong oral health.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="oral-surgery-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Oral Surgery" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Oral Surgery</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Oral surgery includes procedures that address more advanced dental needs, such as extractions and other surgical treatments related to oral health.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="periodontics-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Periodontics" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Periodontics</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Periodontics focuses on the health of the gums and supporting structures around the teeth. Healthy gums are essential to maintaining both function and appearance.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+<a class="block group" href="orthodontics-glendale.html">
+<div class="bg-white p-6 md:p-8 shadow-soft rounded-[30px] h-full border border-gray-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="img-hover-zoom mb-6"><img alt="Orthodontics" class="w-full h-[260px] object-cover rounded-[24px]" src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<h4 class="text-3xl mb-4 text-charcoal group-hover:text-gold transition-colors">Orthodontics</h4>
+<p class="text-charcoal-light font-light leading-relaxed mb-6">Orthodontics helps improve the alignment of the teeth and bite. Better alignment can support oral health, comfort, and a more balanced smile.</p>
+<span class="pill-light inline-flex px-5 py-3 text-xs uppercase tracking-[0.18em]">Explore Service</span>
+</div>
+</a>
+</div></div>
+</div>
+</section><section class="py-28 md:py-36 bg-[#f8f6f2] overflow-hidden" id="reviews">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-20 reveal-up">
+<p class="uppercase tracking-[0.25em] text-[#b89652] text-xs mb-4">Patient Experience</p>
+<h2 class="text-4xl md:text-5xl text-[#1c1c1c] mb-6">Trusted Care, Refined Results</h2>
+<div class="flex justify-center gap-1 text-[#b89652] text-lg">★★★★★</div>
+</div>
+<div class="relative mb-16 reveal-up delay-1">
+<div class="absolute inset-0 rounded-[36px] bg-[radial-gradient(circle_at_center,rgba(184,150,82,0.10),transparent_65%)] blur-2xl scale-95 pointer-events-none"></div>
+<div class="review-featured bg-white rounded-[36px] p-10 md:p-14 shadow-[0_20px_60px_rgba(0,0,0,0.05)] relative transition duration-500">
+<div class="quote-float text-[120px] absolute top-6 left-8 text-[#b89652]/10 leading-none select-none">“</div>
+<p class="text-lg md:text-xl leading-relaxed text-[#333] font-light relative z-10">
+            I love The Dental Circle. The office is beautiful, the staff is warm and professional, and the whole experience feels welcoming from start to finish. This is coming from someone who normally does not enjoy dental visits. The office feels modern, the care feels thoughtful, and Dr. Payam and the team made me feel comfortable throughout my visit. I truly recommend this office to anyone looking for a dentist in Glendale.
+          </p>
+<div class="mt-10 pt-6 border-t border-gray-100">
+<p class="font-medium text-[#1c1c1c]">Makhmal Farhadian</p>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-16">
+<div class="review-card bg-white rounded-[28px] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.04)] reveal-up delay-2 transition duration-500">
+<p class="text-[#444] font-light leading-relaxed">
+            Thank you doctors for the great work on my teeth. The invisalign was a great idea. My smile looks so much better now.
+            I truly recommend this office for people looking for a dentist near Glendale or Burbank area. They are really good in orthodontics and Invisalign treatment. Make sure you ask for the complimentary teeth whitening if you are doing Invisalign. They offer that as a complementary treatment.
+          </p>
+<div class="mt-6 pt-4 border-t border-gray-100">
+<p class="font-medium text-[#1c1c1c]">Farzan Elyasof</p>
+</div>
+</div>
+<div class="review-card bg-white rounded-[28px] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.04)] reveal-up delay-3 transition duration-500">
+<p class="text-[#444] font-light leading-relaxed">
+            Right from the start you get a great personality when you call in and speak with Linet. Then, I came in to a beautiful looking office. I met the assistant Nohely who was very gentle when taking my X-rays. Thereafter, I met Dr. Sooferi, who was very thorough in his explanations about how I needed a root canal. Furthermore, he himself had gentle hands when he worked in my mouth. Angeneh was also a nice person with an outstanding personality. All in all from beginning to end, this was an amazing experience and I don't like going to the dentist.
+          </p>
+<div class="mt-6 pt-4 border-t border-gray-100">
+<p class="font-medium text-[#1c1c1c]">Samuel Galindo</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-[32px] p-6 md:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.04)] reveal-up delay-4 transition duration-500">
+<div class="flex justify-between items-center h-24">
+<div>
+<p class="uppercase tracking-[0.2em] text-[#b89652] text-xs mb-2">Live Reviews</p>
+<h3 class="text-2xl text-[#1c1c1c]">More From Our Patients</h3>
+</div>
+</div>
+<div class="rounded-[24px] overflow-hidden border border-gray-100" style="height: 380px;">
+<div class="elfsight-app-e6b9f7fb-fe9f-41b8-8248-efbbda360fac" data-elfsight-app-lazy=""></div>
+</div>
+</div>
+</div>
+</section><section class="py-24 bg-white border-t border-gray-200" id="contact">
+<div class="max-w-6xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+<div class="animate-on-scroll h-full">
+<div class="bg-ivory border border-gray-100 p-8 md:p-10 shadow-soft h-full flex flex-col justify-between rounded-[32px]">
+<div>
+<h2 class="text-sm uppercase tracking-[0.2em] text-gold mb-4 font-medium">Request Appointment</h2>
+<h3 class="text-4xl md:text-5xl text-charcoal mb-6">Start Your Visit With Confidence</h3>
+<p class="text-charcoal-light font-light leading-relaxed mb-8">Complete the new patient form to get started. If you have any questions before your appointment, our team is here to help make the process simple and welcoming.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<i class="w-5 h-5 text-gold mt-1 shrink-0" data-lucide="map-pin"></i>
+<div>
+<p class="text-xs uppercase tracking-widest text-charcoal-light mb-1">Address</p>
+<a class="text-charcoal hover:text-gold transition-colors leading-relaxed" href="https://maps.google.com/?q=207+N+Central+Ave,+Glendale,+CA+91203" rel="noopener noreferrer" target="_blank">
+                      207 N Central Ave, Glendale, CA 91203
+                    </a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<i class="w-5 h-5 text-gold mt-1 shrink-0" data-lucide="phone"></i>
+<div>
+<p class="text-xs uppercase tracking-widest text-charcoal-light mb-1">Phone</p>
+<a class="text-charcoal hover:text-gold transition-colors" href="tel:8182438888">(818) 243-8888</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<i class="w-5 h-5 text-gold mt-1 shrink-0" data-lucide="clock"></i>
+<div>
+<p class="text-xs uppercase tracking-widest text-charcoal-light mb-2">Hours</p>
+<div class="text-charcoal-light font-light space-y-1 text-sm">
+<p>Monday: 9:00am - 6:00pm</p>
+<p>Tuesday: 9:00am - 6:00pm</p>
+<p>Wednesday: 9:00am - 6:00pm</p>
+<p>Thursday: 9:00am - 6:00pm</p>
+<p>Friday: 9:00am - 6:00pm</p>
+<p>Saturday: 9:00am - 1:00pm</p>
+<p>Sunday: Closed</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 overflow-hidden border border-gray-200 bg-white rounded-[24px]">
+<iframe class="w-full h-[320px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=207%20N%20Central%20Ave,%20Glendale,%20CA%2091203&amp;z=15&amp;output=embed" title="Dental Circle Group Map"></iframe>
+</div>
+</div>
+</div>
+<div class="animate-on-scroll h-full">
+<div class="bg-ivory p-8 md:p-10 shadow-soft border border-gray-100 h-full flex flex-col justify-center rounded-[32px]">
+<h4 class="text-3xl text-charcoal mb-8 border-b border-gray-200 pb-4">New Patient Form</h4>
+<form action="https://formspree.io/f/mdapdyjk" class="space-y-5" id="contact-form" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="first_name">First Name</label>
+<input class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="first_name" name="First Name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="last_name">Last Name</label>
+<input class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="last_name" name="Last Name" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="phone">Phone</label>
+<input class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="phone" name="Phone" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="email">Email</label>
+<input class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="email" name="Email" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="service_interest">Service Interest</label>
+<select class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="service_interest" name="Service Interest">
+<option>Prosthodontics</option>
+<option>Invisalign</option>
+<option>Dental Implants</option>
+<option>Sedation Dentistry</option>
+<option>Family Dentistry</option>
+<option>Preventive Dentistry</option>
+<option>Oral Surgery</option>
+<option>Periodontics</option>
+<option>Orthodontics</option>
+
+</select>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="patient_status">Patient Status</label>
+<select class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="patient_status" name="Patient Status">
+<option>New Patient</option>
+<option>Returning Patient</option>
+</select>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="referral_source">How Did You Hear About Us?</label>
+<select class="w-full px-5 py-3.5 border border-gray-200 bg-white focus:border-gold outline-none transition-colors rounded-full" id="referral_source" name="How Did You Hear About Us">
+<option>Google Search</option>
+<option>Google Maps</option>
+<option>Instagram</option>
+<option>Referral / Friend</option>
+<option>Returning Patient</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-charcoal-light mb-2" for="message">How Can We Help?</label>
+<textarea class="w-full px-5 py-4 border border-gray-200 bg-white focus:border-gold outline-none transition-colors resize-none rounded-[24px]" id="message" name="Message" placeholder="Tell us about your needs, questions, or preferred appointment time." rows="5"></textarea>
+</div>
+<button class="pill-primary w-full px-8 py-4 text-sm uppercase tracking-widest" id="submit-btn" type="submit">Submit Form</button>
+<p class="text-sm mt-4" id="form-status"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-ivory border-t border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="text-center mb-14 animate-on-scroll">
+      <h2 class="text-sm uppercase tracking-[0.2em] text-gold mb-4 font-medium">Areas We Serve</h2>
+      <h3 class="text-4xl md:text-5xl text-charcoal">Glendale care with reach across Los Angeles</h3>
+      <p class="max-w-3xl mx-auto mt-6 text-charcoal-light font-light leading-relaxed">Dental Circle Group is based in Glendale and welcomes patients from Burbank, Los Angeles, and nearby communities looking for cosmetic, family, and implant dentistry.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
+      <a href="dentist-glendale-ca.html" class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-soft hover:-translate-y-1 transition-all block">
+        <p class="text-xs uppercase tracking-[0.22em] text-gold mb-3">Primary Location</p>
+        <h3 class="text-3xl text-charcoal mb-3">Dentist in Glendale, CA</h3>
+        <p class="text-charcoal-light font-light leading-relaxed">Explore our Glendale location page with service highlights, local details, and treatment options for new patients.</p>
+      </a>
+      <a href="dentist-burbank-ca.html" class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-soft hover:-translate-y-1 transition-all block">
+        <p class="text-xs uppercase tracking-[0.22em] text-gold mb-3">Nearby Community</p>
+        <h3 class="text-3xl text-charcoal mb-3">Dentist serving Burbank</h3>
+        <p class="text-charcoal-light font-light leading-relaxed">See how patients from Burbank can access cosmetic, preventive, and restorative dentistry just minutes away in Glendale.</p>
+      </a>
+      <a href="dentist-los-angeles-ca.html" class="bg-white border border-gray-100 rounded-[28px] p-8 shadow-soft hover:-translate-y-1 transition-all block">
+        <p class="text-xs uppercase tracking-[0.22em] text-gold mb-3">Greater LA Area</p>
+        <h3 class="text-3xl text-charcoal mb-3">Dentist serving Los Angeles</h3>
+        <p class="text-charcoal-light font-light leading-relaxed">Discover a Glendale dental office that serves Los Angeles patients looking for a more personal, comfort-focused experience.</p>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-[#0f0f10] pt-16 pb-10 border-t border-white/10">
+<div class="max-w-6xl mx-auto px-6 sm:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12 border-b border-white/10 pb-12">
+<a class="flex items-center" href="index.html">
+<div class="footer-logo"><img alt="Dental Circle Group Logo" src="images/tab-logo-removebg-preview.png" style="width: 140px;"/></div>
+</a>
+<div class="text-center md:text-right text-white/70 text-sm font-light leading-relaxed">
+<p><a class="hover:text-white transition-colors" href="tel:8182438888">(818) 243-8888</a></p>
+<p><a class="hover:text-white transition-colors" href="https://maps.google.com/?q=207+N+Central+Ave,+Glendale,+CA+91203" rel="noopener noreferrer" target="_blank">207 N Central Ave, Glendale, CA 91203</a></p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center text-xs text-white/40 font-light tracking-wide">
+<p>© 2026 Dental Circle Group. All Rights Reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="faq.html">FAQ</a>
+<a class="hover:text-white transition-colors" href="gallery.html">Office Gallery</a>
+<a class="hover:text-white transition-colors" href="smile-results.html">Smile Results</a>
+<a class="hover:text-white transition-colors" href="#contact">Request Appointment</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-4 z-50">
+<div class="flex w-full gap-3">
+<a class="pill-light flex-1 py-3 text-xs uppercase tracking-widest flex items-center justify-center gap-2 font-medium" href="tel:8182438888">
+<i class="w-4 h-4" data-lucide="phone"></i> Call
+      </a>
+<a class="pill-primary flex-1 py-3 text-xs uppercase tracking-widest flex items-center justify-center font-medium" href="#contact">
+        New Patient
+      </a>
+</div>
+</div>
+<script>
+  lucide.createIcons();
+
+  const mobileBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileServicesBtn = document.getElementById("mobile-services-btn");
+  const mobileServicesList = document.getElementById("mobile-services-list");
+  const mobileGalleryBtn = document.getElementById("mobile-gallery-btn");
+  const mobileGalleryList = document.getElementById("mobile-gallery-list");
+  const navbar = document.getElementById("navbar");
+
+  const closeAccordion = (btn, list) => {
+    if (!btn || !list) return;
+    list.classList.add("hidden");
+    const icon = btn.querySelector("[data-lucide='chevron-down'], svg");
+    if (icon) icon.style.transform = "rotate(0deg)";
+  };
+
+  const toggleAccordion = (btn, list, otherBtn, otherList) => {
+    if (!btn || !list) return;
+    const willOpen = list.classList.contains("hidden");
+    closeAccordion(otherBtn, otherList);
+    if (willOpen) {
+      list.classList.remove("hidden");
+      const icon = btn.querySelector("[data-lucide='chevron-down'], svg");
+      if (icon) icon.style.transform = "rotate(180deg)";
+    } else {
+      closeAccordion(btn, list);
+    }
+  };
+
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      if (mobileMenu.classList.contains("hidden")) {
+        closeAccordion(mobileServicesBtn, mobileServicesList);
+        closeAccordion(mobileGalleryBtn, mobileGalleryList);
+      }
+    });
+  }
+
+  if (mobileServicesBtn && mobileServicesList) {
+    mobileServicesBtn.addEventListener("click", () => {
+      toggleAccordion(mobileServicesBtn, mobileServicesList, mobileGalleryBtn, mobileGalleryList);
+    });
+  }
+
+  if (mobileGalleryBtn && mobileGalleryList) {
+    mobileGalleryBtn.addEventListener("click", () => {
+      toggleAccordion(mobileGalleryBtn, mobileGalleryList, mobileServicesBtn, mobileServicesList);
+    });
+  }
+
+  document.querySelectorAll("#mobile-menu a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mobileMenu) mobileMenu.classList.add("hidden");
+      closeAccordion(mobileServicesBtn, mobileServicesList);
+      closeAccordion(mobileGalleryBtn, mobileGalleryList);
+    });
+  });
+
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("bg-white", "shadow-sm");
+        navbar.classList.remove("bg-white/90");
+      } else {
+        navbar.classList.remove("bg-white", "shadow-sm");
+        navbar.classList.add("bg-white/90");
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".animate-on-scroll, .reveal-up").forEach((el) => observer.observe(el));
+
+  document.querySelectorAll(".faq-group").forEach((group) => {
+    const cards = group.querySelectorAll(".faq-card");
+    cards.forEach((card) => {
+      const btn = card.querySelector(".faq-button");
+      if (!btn) return;
+      btn.addEventListener("click", () => {
+        const isActive = card.classList.contains("active");
+        cards.forEach((c) => c.classList.remove("active"));
+        if (!isActive) card.classList.add("active");
+      });
+    });
+  });
+
+  const contactForm = document.getElementById("contact-form");
+  const formStatus = document.getElementById("form-status");
+  const submitBtn = document.getElementById("submit-btn");
+
+  if (contactForm && submitBtn) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Submitting...";
+      submitBtn.disabled = true;
+      if (formStatus) formStatus.textContent = "";
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: { Accept: "application/json" }
+        });
+
+        if (formStatus) {
+          if (response.ok) {
+            formStatus.textContent = "Thank you. Your form has been submitted successfully.";
+            formStatus.className = "text-sm mt-4 text-green-600";
+            contactForm.reset();
+          } else {
+            formStatus.textContent = "Something went wrong. Please try again.";
+            formStatus.className = "text-sm mt-4 text-red-600";
+          }
+        }
+      } catch (error) {
+        if (formStatus) {
+          formStatus.textContent = "Network error. Please try again.";
+          formStatus.className = "text-sm mt-4 text-red-600";
+        }
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+</script>
+</body>
+</html>
