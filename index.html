@@ -342,6 +342,30 @@
   transform: scale(1.03);
 }
 
+
+.mobile-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.95rem 0;
+  background: transparent;
+  color: #4b4b4b;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.mobile-subnav-row {
+  display: block;
+  padding: 0.7rem 0;
+  color: #4b4b4b;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+
     @media (max-width: 768px) {
       #navbar .top-right-button { display: none; }
       #navbar .max-w-7xl { padding-left: 16px; padding-right: 16px; }
@@ -469,38 +493,54 @@
 
 <div class="md:hidden hidden bg-white border-t border-gray-100 shadow-sm absolute w-full" id="mobile-menu">
 <div class="px-5 py-4 flex flex-col">
-<a class="py-3 text-sm uppercase tracking-widest text-charcoal-light border-b border-gray-100" href="index.html">Home</a>
+<a class="mobile-nav-row border-b border-gray-100" href="index.html">
+  <span>Home</span>
+  <span class="w-5"></span>
+</a>
 
-<button class="flex items-center justify-between text-sm uppercase tracking-widest text-charcoal-light py-3 border-b border-gray-100" id="mobile-services-btn" type="button">
-<span>Services</span>
-<i class="w-4 h-4 transition-transform duration-200" data-lucide="chevron-down"></i>
+<button class="mobile-nav-row border-b border-gray-100" id="mobile-services-btn" type="button">
+  <span>Services</span>
+  <i class="w-5 h-5 transition-transform duration-200" data-lucide="chevron-down"></i>
 </button>
-<div class="hidden py-3 pl-2 space-y-1" id="mobile-services-list">
-<a class="block py-2 text-sm text-charcoal-light" href="prosthodontics-glendale.html">Prosthodontics</a>
-<a class="block py-2 text-sm text-charcoal-light" href="invisalign-glendale.html">Invisalign</a>
-<a class="block py-2 text-sm text-charcoal-light" href="dental-implants-glendale.html">Dental Implants</a>
-<a class="block py-2 text-sm text-charcoal-light" href="sedation-dentistry-glendale.html">Sedation Dentistry</a>
-<a class="block py-2 text-sm text-charcoal-light" href="family-dentist-glendale.html">Family Dentistry</a>
-<a class="block py-2 text-sm text-charcoal-light" href="preventive-dentistry-glendale.html">Preventive Dentistry</a>
-<a class="block py-2 text-sm text-charcoal-light" href="oral-surgery-glendale.html">Oral Surgery</a>
-<a class="block py-2 text-sm text-charcoal-light" href="periodontics-glendale.html">Periodontics</a>
-<a class="block py-2 text-sm text-charcoal-light" href="orthodontics-glendale.html">Orthodontics</a>
+<div class="hidden pl-4 pb-3 border-b border-gray-100" id="mobile-services-list">
+  <a class="mobile-subnav-row" href="prosthodontics-glendale.html">Prosthodontics</a>
+  <a class="mobile-subnav-row" href="invisalign-glendale.html">Invisalign</a>
+  <a class="mobile-subnav-row" href="dental-implants-glendale.html">Dental Implants</a>
+  <a class="mobile-subnav-row" href="sedation-dentistry-glendale.html">Sedation Dentistry</a>
+  <a class="mobile-subnav-row" href="family-dentist-glendale.html">Family Dentistry</a>
+  <a class="mobile-subnav-row" href="preventive-dentistry-glendale.html">Preventive Dentistry</a>
+  <a class="mobile-subnav-row" href="oral-surgery-glendale.html">Oral Surgery</a>
+  <a class="mobile-subnav-row" href="periodontics-glendale.html">Periodontics</a>
+  <a class="mobile-subnav-row" href="orthodontics-glendale.html">Orthodontics</a>
 </div>
 
-<button class="flex items-center justify-between text-sm uppercase tracking-widest text-charcoal-light py-3 border-b border-gray-100" id="mobile-gallery-btn" type="button">
-<span>Gallery</span>
-<i class="w-4 h-4 transition-transform duration-200" data-lucide="chevron-down"></i>
+<button class="mobile-nav-row border-b border-gray-100" id="mobile-gallery-btn" type="button">
+  <span>Gallery</span>
+  <i class="w-5 h-5 transition-transform duration-200" data-lucide="chevron-down"></i>
 </button>
-<div class="hidden py-3 pl-2 space-y-1" id="mobile-gallery-list">
-<a class="block py-2 text-sm text-charcoal-light" href="gallery.html">Office Gallery</a>
-<a class="block py-2 text-sm text-charcoal-light" href="smile-results.html">Smile Results</a>
+<div class="hidden pl-4 pb-3 border-b border-gray-100" id="mobile-gallery-list">
+  <a class="mobile-subnav-row" href="gallery.html">Office Gallery</a>
+  <a class="mobile-subnav-row" href="smile-results.html">Smile Results</a>
 </div>
 
-<a class="py-3 text-sm uppercase tracking-widest text-charcoal-light border-b border-gray-100" href="team.html">Team</a>
-<a class="py-3 text-sm uppercase tracking-widest text-charcoal-light border-b border-gray-100" href="#reviews">Reviews</a>
-<a class="py-3 text-sm uppercase tracking-widest text-charcoal-light border-b border-gray-100" href="faq.html">FAQ</a>
-<a class="py-3 text-sm uppercase tracking-widest text-gold" href="#contact">Request Appointment</a>
+<a class="mobile-nav-row border-b border-gray-100" href="team.html">
+  <span>Team</span>
+  <span class="w-5"></span>
+</a>
+<a class="mobile-nav-row border-b border-gray-100" href="#reviews">
+  <span>Reviews</span>
+  <span class="w-5"></span>
+</a>
+<a class="mobile-nav-row border-b border-gray-100" href="faq.html">
+  <span>FAQ</span>
+  <span class="w-5"></span>
+</a>
+<a class="mobile-nav-row text-gold" href="#contact">
+  <span>Request Appointment</span>
+  <span class="w-5"></span>
+</a>
 </div>
+</div></div>
 </div>
 </nav>
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
