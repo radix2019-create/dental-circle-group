@@ -279,13 +279,6 @@ h1, h2, h3, h4, h5 { font-family: 'Cormorant Garamond', serif; }
 
 <section class="py-20 bg-white">
 <div class="max-w-6xl mx-auto px-6 sm:px-8">
-<div class="flex flex-wrap gap-3 justify-center mb-10" id="result-filters">
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em] active" data-filter="all">All Results</button>
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="invisalign">Invisalign</button>
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="veneers">Veneers</button>
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="implants">Implants</button>
-<button class="gallery-filter pill-light px-5 py-3 text-xs uppercase tracking-[0.18em]" data-filter="featured">Featured Visit</button>
-</div>
 <div id="results-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
 <div id="results-empty" class="hidden empty-note rounded-[28px] px-8 py-14 text-center max-w-3xl mx-auto">
 <h3 class="text-3xl mb-3">No smile results yet</h3>
@@ -469,7 +462,6 @@ const RESULTS_ENDPOINT = "https://script.google.com/macros/s/AKfycbx_tNknF9C2tEl
 
 const resultsFallback = [];
 
-let resultFilter = "all";
 
 function createSlider(card) {
   const wrap = card.querySelector(".ba-wrap");
@@ -513,11 +505,7 @@ function createSlider(card) {
 function renderResults(items) {
   const grid = document.getElementById("results-grid");
   const empty = document.getElementById("results-empty");
-  const filtered = items.filter(item => {
-    if (resultFilter === "all") return true;
-    if (resultFilter === "featured") return String(item.public_figure || "").toLowerCase() === "true";
-    return String(item.treatment || "").toLowerCase() === resultFilter;
-  });
+const filtered = items;
   grid.innerHTML = "";
 
   if (!filtered.length) {
@@ -564,14 +552,7 @@ async function loadResults() {
   }
 }
 
-document.querySelectorAll("#result-filters .gallery-filter").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll("#result-filters .gallery-filter").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    resultFilter = btn.dataset.filter;
-    loadResults();
-  });
-});
+
 
 loadResults();
 </script>
