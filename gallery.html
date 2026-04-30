@@ -473,15 +473,9 @@ const filtered = items;
   filtered.forEach(item => {
     const card = document.createElement("article");
     card.className = "gallery-card";
-    card.innerHTML = `
-      <img class="gallery-img" src="${item.image_url}" alt="${item.title || 'Office Gallery Photo'}">
-      <div class="p-6">
-        <div class="flex items-center justify-between gap-4 mb-3">
-          <h3 class="text-3xl text-charcoal">${item.title || 'Gallery Photo'}</h3>
-        </div>
-        <p class="text-charcoal-light font-light leading-relaxed">${item.caption || ''}</p>
-      </div>
-    `;
+card.innerHTML = `
+  <img class="gallery-img" src="${item.image_url}" alt="${item.title || 'Office Gallery Photo'}">
+`;
     grid.appendChild(card);
   });
 }
