@@ -13,9 +13,11 @@ This folder records publicly observable launch behavior and the remaining checks
 
 - Google Search Console read the production sitemap successfully on November 16, 2026, and reported 23 discovered pages.
 
+- Search Console Live Test reported that the production homepage can be indexed after an earlier noindex result. The live test does not establish inclusion in the Google index.
+
 ## Remaining work in order
 
-1. Inspect the live homepage and priority services in Google Search Console.
+1. Request recrawling of the homepage, then run a live inspection of priority service pages in Google Search Console.
 2. Continue auditing legacy URLs. Identify equivalent destinations for /new-patients/ and /pediatric-dentistry/ before adding redirects.
 3. Locate the editable Next.js/Payload source. The launch conversation documents the temporary SEO fix. Once the source is recovered, implement and test canonical, robots and sitemap behavior in the app. Keep staging and the confirmation page noindex. Verify the replacement release before retiring the temporary Worker.
 
