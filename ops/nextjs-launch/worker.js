@@ -48,7 +48,7 @@ export default {
       return upstream;
     }
 
-    return new HTMLRewriter()
+    const rewritten = new HTMLRewriter()
       .on('link[rel="canonical"]', {
         element(tag) {
           const href = tag.getAttribute('href');
@@ -66,5 +66,27 @@ export default {
         },
       })
       .transform(upstream);
+
+    // Fix preview metadata still serialized in the Next.js page data.
+    const html = (await rewritten.text())
+      .replaceAll(
+        String.raw`\"name\":\"robots\",\"content\":\"noindex, nofollow\"`,
+        String.raw`\"name\":\"robots\",\"content\":\"index, follow\"`,
+      )
+      .replaceAll(
+        String.raw`\"rel\":\"canonical\",\"href\":\"` + previewOrigin,
+        String.raw`\"rel\":\"canonical\",\"href\":\"` + productionOrigin,
+      );
+
+    const headers = new Headers(rewritten.headers);
+    headers.delete('Content-Length');
+    headers.delete('Content-Encoding');
+    headers.delete('ETag');
+
+    return new Response(html, {
+      status: rewritten.status,
+      statusText: rewritten.statusText,
+      headers,
+    });
   },
 };
