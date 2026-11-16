@@ -11,9 +11,11 @@ This folder records publicly observable launch behavior and the remaining checks
 - Verified legacy redirects for /about-us/, /dental-implants/, /root-canal-therapy/, and /preventative-dentistry/.
 - Verified 12 new legacy redirects for orthodontics, periodontics, cosmetic dentistry, oral surgery, Invisalign, and veneers, with and without a trailing slash. Each returned one 301 to the matching /services/ page, preserved the test query string, and ended with HTTP 200.
 
+- Search Console accepted submission of the production sitemap. Processing status and URL discovery are pending verification.
+
 ## Remaining work in order
 
-1. Submit sitemap.xml to Google Search Console and inspect the homepage and priority services.
+1. Verify Search Console processing of sitemap.xml, then inspect the live homepage and priority services.
 2. Continue auditing legacy URLs. Identify equivalent destinations for /new-patients/ and /pediatric-dentistry/ before adding redirects.
 3. Locate the editable Next.js/Payload source. The launch conversation documents the temporary SEO fix. Once the source is recovered, implement and test canonical, robots and sitemap behavior in the app. Keep staging and the confirmation page noindex. Verify the replacement release before retiring the temporary Worker.
 
