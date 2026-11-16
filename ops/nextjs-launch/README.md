@@ -1,6 +1,6 @@
 # Dental Circle Group launch handoff
 
-This folder records publicly observable launch behavior and the remaining checks for the Next.js/Payload website. The Worker is the code supplied for deployment in the launch conversation.
+This folder records publicly observable launch behavior and the remaining checks for the Next.js/Payload website. The Worker is reconstructed from the launch conversation, including the serialized Next.js metadata fix. The public responses match the observed effect of this fix. The deployed Cloudflare source was not exported for a byte-for-byte comparison.
 
 ## Verified on November 16, 2026
 
@@ -19,8 +19,9 @@ This folder records publicly observable launch behavior and the remaining checks
 
 ## Remaining work in order
 
-1. Confirm Google Index status for the homepage and Dental Implants page after processing.
-2. Continue auditing legacy URLs. Identify equivalent destinations for /new-patients/ and /pediatric-dentistry/ before adding redirects.
-3. Locate the editable Next.js/Payload source. The launch conversation documents the temporary SEO fix. Once the source is recovered, implement and test canonical, robots and sitemap behavior in the app. Keep staging and the confirmation page noindex. Verify the replacement release before retiring the temporary Worker.
+1. Import legacy-redirects-batch-2.csv into the existing redirect list and verify all six source URLs. The CSV is committed. The public site still returned 404 for the three old paths without a trailing slash at the last check.
+2. Confirm Google Index status for the homepage and Dental Implants page after processing.
+3. Continue auditing legacy URLs. Identify equivalent destinations for /new-patients/ and /pediatric-dentistry/ before adding redirects.
+4. Locate the editable Next.js/Payload source. The launch conversation documents the temporary SEO fix. Once the source is recovered, implement and test canonical, robots and sitemap behavior in the app. Keep staging and the confirmation page noindex. Verify the replacement release before retiring the temporary Worker.
 
 The production application source is currently unavailable.
